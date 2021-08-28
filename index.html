@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <title>Formulário</title>
 </head>
+
 <body>
     <div class="box">
         <fieldset>
             <form action="" method="GET" onsubmit="return valida();">
-                <legend><b>Cadastro Pessoal - Atração</b></legend>
+                <legend><img src="logo-itau-256.png" class="img_itau"/><br><b>Cadastro dos Clientes da ItaúTech - Dados</b></legend>
                 <br>
-                <div class="inputBox">
+                    <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome: *</label>
+                    </div>
+                <br><br>
+                    <div class="inputBox">
+                    <input type="cpf" name="cpf" maxlength="12" onblur="return verificarCPF(this.value);" class="inputUser" required>
+                    <label for="cpf" class="labelInput">CPF: *</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="rg" id="rg" class="inputUser">
                     <label for="rg" class="labelInput">RG:</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="cpf" name="cpf" maxlength="12" onblur="return verificarCPF(this.value);" class="inputUser" required>
-                    <label for="cpf" class="labelInput">CPF: *</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
@@ -49,17 +50,52 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
+                    <input type="text" name="bairro" id="bairro" class="inputUser">
+                    <label for="bairro" class="labelInput">Bairro: </label>
+                </div>
+                <br><br>
+                <div class="inputBox">
                     <input type="text" name="cidade" id="Cidade" class="inputUser">
                     <label for="cidade" class="labelInput">Cidade:</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="estado" id="Estado" class="inputUser">
+                    <select name="text" id="Estado" class="inputUser">
+                        <option value=""></option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
                     <label for="estado" class="labelInput">Estado:</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="CEP" maxlength="8" id="cep" class="inputUser" >
+                    <input type="text" name="CEP" maxlength="9" id="cep" placeholder="xxxx-xxx" class="inputUser" >
                     <label for="CEP" class="labelInput">CEP:</label>
                 </div>
                 <br><br>

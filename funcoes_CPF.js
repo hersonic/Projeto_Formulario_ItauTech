@@ -5,7 +5,7 @@ function verificarCPF(c){
     var dv = s.substr(9,2);
     var d1 = 0;
     var v = false;
- 
+    
     for (i = 0; i < 9; i++){
         d1 += c.charAt(i)*(10-i);
     }
