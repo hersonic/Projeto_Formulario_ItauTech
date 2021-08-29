@@ -1,114 +1,149 @@
 # Desafio Individual – Formulário Pessoal
 | **Autor: Herick Portugal Bomtorin**                          |
 | :----------------------------------------------------------- |
-| Idade: 39 anos                                               |
-| Tipo de deficiência: Deficiente auditivo bilateral profunda  |
-| CID: H90.5                                                   |
-| Objetivo: Desenvolver um formulário de cadastro dos clientes a fim de facilitar de validações e expressão regulares. |
+| **Idade:** 39 anos                                               |
+| **Tipo de deficiência:** Deficiente auditivo bilateral profunda  |
+| **CID:** H90.5                                                   |
+| **Objetivo:** Desenvolver um formulário de cadastro dos clientes a fim de facilitar de validações e expressão regulares. |
 
-<h2>Ferramenta:<h2>
+## Ferramenta
 
 -  Visual Studio Code no Windows.
 
-
-
-**<h2>LINGUAGENS:</h2>**
+## LINGUAGENS
 
 - HTML
 - CSS
 - JavaScript
 
-**<h2>HTML</h2>**
+### HTML
 
-No ínício, começa com **!DOCTYPE HTML**, uma declaração para avisar aos navegadores que é um documento HTML, e dentro, tem **html** representa a raiz de um documento HTML e contém um atributo **lang** para declarar o idioma da página da web a fim de ajudar os mecanismos de busca e os navegadores.
+#### Início
 
-Dentro desse elemento, tem um elemento head designado para informar os metadados e buscar os recursos. Está entre html e body.
+Temos uma declaração chamada `!DOCTYPE HTML`, que serve para informar os navegadores sobre o tipo de documento.
 
-**<h4>Metadados</h4>**
+Temos um elemento `html`, que é uma raiz de um documento HTML, com um atributo `lang` que declara o nosso idioma para a língua da site para ser detectada nos mecanismos de busca e pelos navegadores. 
 
-O **link** é um elemento que conecta os recursos externos aos documentos atuais para renderizar as coisas. Em seguida, os atributos:
+Então prosseguimos para o elemento `head` que declara os metadados para definir e informar aos navegadores
 
-O atributo **rel** é um relacionamento de tipo de arquivo;
-O atributo **type** é um tipo de arquivo;
-O atributo **media** especifica quais os dispositivos o documento deve ser renderizado.
+#### `meta`
 
-**meta charset="UTF-8"**: É um elemento de metadado para a codificação e a renderização de caracteres para o documento HTML
-
-**meta http-equiv="X-UA-Compatible" content="IE=edge"**: É um elemento de metadado de fornecimento de HTTP para o conteúdo do navegador
-
-**meta name="viewport" content="width=device-width, initial-scale=1.0"**: É um elemento de metadado para renderizar a compatiblidade de visualizacão da página com todos os dispositivos
+- **`meta charset="UTF-8`**: um elemento para a codificação e a renderização de caracteres para o documento HTML;
+- **`meta http-equiv="X-UA-Compatible" content="IE=edge`**: um elemento para fornecimento de HTTP para o conteúdo do navegador;
+- **`meta name="viewport" content="width=device-width, initial-scale=1.0"`**: um elemento para renderizar o site todos os dispositivos
 
 **title** Dados Pessoais-ItauTech **title**  O **title** é um elemento que renderiza o título para a aba do navegador.
 
-**<h2>CORPO</h2>**
+#### `body`
 
-O elemento <body> renderiza todo o corpo de um document.
+O elemento `body` renderiza e estiliza todo o corpo de um document.
 
-No corpo, vocês encontram os elementos que são divisões ou uma seções num documento HTML. O atributo "class" é um nome de classe para um elemento para pegar os seletores de um arquivo CSS.
-Além disso, numa divisão, temos:
+Dentro do `body`, temos uma divisão contendo uma classe chamada `box` que agrupa uma caixa.
 
-- **h1**: é um cabeçalho de primeiro grau.
+Então nessa divisão, temos um elemento `fidelset`, que define uma bordura e um contorno do grupo.
 
-- **h2**: é um cabeçalho de segundo grau.
+#### `form`
 
-- **p**: é uma definição de parágrafos.
+O `form` é um elemento de formulário para preencher os campos. Nele, temos atributos:`
 
-- **hr**: é um mais frequentemente exibido como uma regra horizontal que é usada para separar conteúdo (ou definir uma alteração) numa página HTML. 
+- `action` serve para encaminhar a página ao enviar;
+- `method` pega os dados para postá-los no resultado ao enviar;
+- `onsubmit` é um evento em JavaScript;
 
-**<h2>Formulários</h2>**
+Dentro do `form`, encontramos:
 
-O form é um elemento de criação de formulário usado para onde o usuário possa preencher os campos. Nele, tem um atributo **"onsumbit"** é um evento de submissão em JavaScript que executa a função. Dentro do formulário, definimos as classes grupo-de-caixa para agrupar o rótulo e o campo para uma mesma linha e expandir a largura do campo até à largura da classe **"descrição"**.
+- `legend`: uma legenda do grupo;
+- `img`: uma imagem renderizada no documento HTML
+  - `alt`: uma alternativa, aso a imagem não carregue, e é uma das regras mais importantes de acessibilidade;
+  - `src`: um link de uma imagem externa;
+- `b` torna o texto em negrito;
+- `br` quebra o elemento em uma nova linha.`
 
+Temos uma divisão com uma classe `inputBox` para agrupar um campo e um rótulo a fim de superar os limites. Nele, temos:
 
-Temos neles:
+- `input`: um campo de entrada;
+  - `type`: um tipo de campo;
+  - `name`: um nome do campo;
+  - `id`: um identificador do campo;
+  - `required`: obrigatório;
+  - `onblur`: um evento em JavaScript;
+  - `value`: um valor do campo.
 
-<h2>Rótulos<h2>
+- `label`: um rótulo;
+  - `for`: uma vinculação do `id` do `input`.
 
-- O label é um elemento que rotula a informação.
-- O atributo for é um método que pega o identificador do campo de entrada.
-- Campos de entrada
-- O input é um elemento de campo de entrada para o usuário escrever o valor e preenchê-lo.
+- `select`: uma lista suspensa
+  - `option`: uma opção ou uma escolha ou uma alternativa
+    - `value`: um valor da opção para o método `get` ou `post`
 
-- O atributo "id" é uma vinculação do campo ao rótulo.
+### JavaScript
 
-- O atributo "required" significa que o campo não pode ser vazio.
+Temos uma função chamada `valida()`, dentro da qual, temos um alerta, caso todos os campos sejam preenchidos. 
 
-- O atributo "maxlength" define o limite de caracteres.
+Já temos outra função `verificaCPF` que é uma verificador de validação de CPF:`
 
-- O atributo "placeholder" é um valor da dica ou do exemplo.
+O `var c = s.substr(0,9)` é um método legdo de *string* que é usado para extrair uma *substring* de uma *string*, dada uma posição inicial e um comprimento. Uma `*substring* de primeiros 9 números de CPF.
 
-- O atributo "pattern" é um método de expressão regular.
+O `var dv = s.substr(9,2)` extrai primeiros 9 números e últimos 2 do CPF.
 
-  
+```js
+for (i = 0; i < 9; i++)
+{
+    d1 += c.charAt(i)*(10-i);
+}
+```
 
-<h3>Validações e botão submit</h3>
+Conta 9 números num *loop* para acrescentar os caracteres.
 
-O comando **input type="submit" name="submit" id="submit" value="Enviar"** é um botão de submissão com um valor para renderizar
+```js
+if (d1 == 0)
+{
+    alert("CPF Inválido")
+    v = true;
+    return false;
+}
+```
 
-O comando **script type="text/javascript" src="funcoes_CPF.js** é elemento para anexar o arquivo externo em JavaScript e define o tipo de documento.
+Checamos se for zero ou vazio, avisamos com um alerta.
 
+```js
+d1 = 11 - (d1 % 11);
+if (d1 > 9) d1 = 0;
+if (dv.charAt(0) != d1){
+    alert("CPF Inválido")
+    v = true;
+    return false;
+}
+```
 
+Renderizamos e contamos o número de CPF, checamos se for que 9 números e se não é igual, informamos que é um CPF válido.
 
-**<h2>JavaScript</h2>**
+```js
+d1 *= 2;
+for (i = 0; i < 9; i++){
+    d1 += c.charAt(i)*(11-i);
+}
+```
 
-Executamos uma função (function) chamada validarCPF(), que foi executada ao clicar o botão em HTML. Dentro de uma função, usamos de variáveis para pegar o CPF por meio de um identificador do campo de entrada. Então ao obter o valor, analisamos 3 casos:
+Caso tenha um hífen, contamos os números e multiplicamos, então mandamos para a próxima:
 
-Checamos se for if (d1 == 0), avisamos (alert) que o CPF deve ter CPF inválidos.
+```js
+d1 = 11 - (d1 % 11);
+if (d1 > 9) d1 = 0;
+if (dv.charAt(1) != d1){
+    alert("CPF Inválido")
+    v = true;
+    return false;
+}
+if (!v) {
+    alert("CPF Válido")
+}
+```
 
-No segundo caso, checamos o if (d1 > 9) d1 = 0, avisamos o retorno como CPF inválidos.
+Então se checamos o número `1` não é igual à variável contada e multiplicada, informamos que é um CPF inválido. Senão validamos. 
 
-No ultimo caso de checagem a qual retornou de aviso de alerta que teve CPF válido ao digitar dado correto.
+## Referências
 
-Outro caso sobre o botão "enviar":
+### HTML
 
-Criamos uma alerta de aviso que os dados foram enviados. Em caso for incompleto já temos configuração em HTML que exibe dados obrigatórios.
-
-**<h2>Referências</h2>**
-
-- HTML
-
-- O uso de no site https://www.w3schools.com/html/default.asp
-- O uso de expressão regular de números permitidos (maxleght).
-- JavaScript
-- A expressão regular de CPF e ENVIAR.
-- CSS
+- [O uso de `HTML` no site](https://www.w3schools.com/html/default.asp)
