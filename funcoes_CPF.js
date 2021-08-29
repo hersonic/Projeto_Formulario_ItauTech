@@ -1,6 +1,11 @@
+function valida(){
+    alert('FORMULÁRIO ENVIADO COM SUCESSO!!!');
+    return true;
+}
+
 function verificarCPF(c){
     var i;
-    s = c;
+    var s = c;
     var c = s.substr(0,9);
     var dv = s.substr(9,2);
     var d1 = 0;
@@ -21,7 +26,7 @@ function verificarCPF(c){
         v = true;
         return false;
     }
- 
+  
     d1 *= 2;
     for (i = 0; i < 9; i++){
         d1 += c.charAt(i)*(11-i);
@@ -36,9 +41,4 @@ function verificarCPF(c){
     if (!v) {
         alert("CPF Válido")
     }
-}
-
-function valida(){
-    alert('FORMULÁRIO ENVIADO COM SUCESSO!!!');
-    return true;
 }
