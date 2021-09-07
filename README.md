@@ -147,3 +147,4 @@ Então se checamos o número `1` não é igual à variável contada e multiplica
 ### HTML
 
 - [O uso de `HTML` no site](https://www.w3schools.com/html/default.asp)
+- https://formulariotechherickbomtorin.netlify.app/
